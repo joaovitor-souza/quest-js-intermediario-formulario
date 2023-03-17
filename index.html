@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Validação</title>
-
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
+    <title>Formulário de Validação</title>
+
 </head>
 
 <body>
-    <div class="content">
+    <main class="content">
         <div class="question">
             <h2 class="tittle">Ficou com dúvida? <br> Nos mande uma mensagem!</h2>
             <p class="text">caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato
@@ -21,23 +21,19 @@
 
         <div class="form-inputs">
             <form action="index.html" class="form">
-
-                <input type="text" placeholder="Nome Completo *" class="inputs">
-                <span class="span-occult">campo obrigatório</span>
-                <input type="email" placeholder="Email *" class="inputs">
-                <span class="span-occult">campo obrigatório</span>
-
-                <input type="text" placeholder="Telefone *" class="inputs">
-                <span class="span-occult">campo obrigatório</span>
-
-                <textarea type="text" placeholder="Mensagem *" class="inputs mensage"></textarea>
-                <span class="span-occult">campo obrigatório</span>
+                <input type="text" placeholder="Nome Completo *" class="inputs" autocomplete="none">
+                <span class="span-alert span-occult">campo obrigatório</span>
+                <input type="email" placeholder="Email *" class="inputs" autocomplete="none">
+                <span class="span-alert span-occult">campo obrigatório</span>
+                <input type="text" placeholder="Telefone *" class="inputs" autocomplete="none">
+                <span class="span-alert span-occult">campo obrigatório</span>
+                <textarea type="text" placeholder="Mensagem *" class="inputs mensage" autocomplete="none"></textarea>
+                <span class="span-alert span-occult">campo obrigatório</span>
             </form>
             <p>*campos obrigatórios</p>
-
-            <input type="button" value="Enviar" class="submit" id="submit">
+            <button type="submit" class="btn-submit">Enviar</button>
         </div>
-    </div>
+    </main>
 
     <script src="./src/js/index.js"></script>
 </body>

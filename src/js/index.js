@@ -1,24 +1,18 @@
-const campos = document.querySelectorAll(".inputs");
-const spans  = document.querySelectorAll(".span-occult");
-const submit = document.getElementById("submit");
+const allFilds = document.querySelectorAll(".inputs");
+const alertMessage = document.querySelectorAll(".span-alert");
+const btnSend = document.querySelector(".btn-submit");
 
-submit.addEventListener("click", function () {
+btnSend.addEventListener("click", function () {
+  allFilds.forEach((input) => {
+      if (input.value !== '') {
+        input.classList.remove("invalid-field");
+        input.classList.add("valid-field");
+        input.nextElementSibling.classList.add("span-occult");
 
-campos.forEach(input =>{
-    if (input.value === "") {
-        input.classList.add("invalid")
-        input.classList.remove("valid")
-    } else {
-        input.classList.add("valid")
-    }
-
-  })
-
-//   spans.forEach(span =>{
-//   if (campos === false){
-//     span.classList.add("span-alert")
-//   }
-  
-// })
+      } else {
+        input.classList.add("invalid-field");
+        input.classList.remove("valid-field");
+        input.nextElementSibling.classList.remove("span-occult");          
+        }
+    });
 });
-
